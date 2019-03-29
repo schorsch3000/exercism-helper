@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+MYPATH="$(realpath "$(dirname "$0")")"
+
+. "$MYPATH/init.sh";
+
+case "$TRACK" in
+    *)
+        find | entr -c run-tests
+    ;;
+esac

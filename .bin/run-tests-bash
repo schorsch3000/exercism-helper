@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+MYPATH="$(realpath "$(dirname "$0")")"
+
+. "$MYPATH/init.sh"
+
+BATS="$BASE_DIR/.bin/tools/bats-core/bin/bats"
+
+$BATS -p *_test.sh

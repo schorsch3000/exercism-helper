@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+MYPATH="$(realpath "$(dirname "$0")")"
+
+. "$MYPATH/init.sh"
+
+
+which "run-tests-$TRACK" &>/dev/null || { echo "No test command for $TRACK found" ; exit 1 ; }
+
+
+"run-tests-$TRACK" "$@"

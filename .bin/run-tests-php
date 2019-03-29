@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+MYPATH="$(realpath "$(dirname "$0")")"
+
+. "$MYPATH/init.sh"
+
+PHPUNIT="$BASE_DIR/.bin/tools/phpunit/vendor/bin/phpunit"
+
+
+
+php "$PHPUNIT" *_test.php
